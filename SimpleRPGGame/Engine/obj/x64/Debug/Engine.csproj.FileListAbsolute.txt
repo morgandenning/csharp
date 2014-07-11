@@ -1,0 +1,8 @@
+C:\Users\Morgan\SkyDrive\Documents\SimpleRPGGame\Engine\bin\x64\Debug\Assets\Sounds\Music\MainTheme.wav
+C:\Users\Morgan\SkyDrive\Documents\SimpleRPGGame\Engine\bin\x64\Debug\Engine.dll
+C:\Users\Morgan\SkyDrive\Documents\SimpleRPGGame\Engine\bin\x64\Debug\Engine.pdb
+C:\Users\Morgan\SkyDrive\Documents\SimpleRPGGame\Engine\obj\x64\Debug\Engine.g.resources
+C:\Users\Morgan\SkyDrive\Documents\SimpleRPGGame\Engine\obj\x64\Debug\Engine.Properties.Resources.resources
+C:\Users\Morgan\SkyDrive\Documents\SimpleRPGGame\Engine\obj\x64\Debug\Engine.csproj.GenerateResource.Cache
+C:\Users\Morgan\SkyDrive\Documents\SimpleRPGGame\Engine\obj\x64\Debug\Engine.dll
+C:\Users\Morgan\SkyDrive\Documents\SimpleRPGGame\Engine\obj\x64\Debug\Engine.pdb

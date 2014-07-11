@@ -1,0 +1,660 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B52F7A9E-3962-4E9F-8E87-C1A9884F5C7C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleRPGGame</RootNamespace>
+    <AssemblyName>SimpleRPGGame</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <NuGetPackageImportStamp>10f07b63</NuGetPackageImportStamp>
+    <PublishUrl>C:\Users\Morgan\SkyDrive\Documents\SimpleRPGInstallerCO\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>https://portalvhds2nywljc94h372.blob.core.windows.net/simplerpg/</InstallUrl>
+    <UpdateUrl>https://portalvhds2nywljc94h372.blob.core.windows.net/simplerpg/</UpdateUrl>
+    <WebPage>publish.htm</WebPage>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <ExcludeDeploymentUrl>true</ExcludeDeploymentUrl>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SimpleRPGGame.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>BEC66F7E6A36D6558FD8323675C5E738644A56CC</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SimpleRPGGame_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>Internet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SimpleRPGGame_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1405059831_87369.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="GameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GameWindow.xaml.cs">
+      <DependentUpon>GameWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="NewGameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NewGameWindow.xaml.cs">
+      <DependentUpon>NewGameWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="SimpleRPGGame_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Engine\Engine.csproj">
+      <Project>{05144c22-9554-4db8-b51f-aade6407078c}</Project>
+      <Name>Engine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\armor.png">
+      <Link>Assets\Images\Icons\128\armor.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\axe.png">
+      <Link>Assets\Images\Icons\128\axe.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\axe2.png">
+      <Link>Assets\Images\Icons\128\axe2.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\axeDouble.png">
+      <Link>Assets\Images\Icons\128\axeDouble.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\axeDouble2.png">
+      <Link>Assets\Images\Icons\128\axeDouble2.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\backpack.png">
+      <Link>Assets\Images\Icons\128\backpack.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\bow.png">
+      <Link>Assets\Images\Icons\128\bow.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\coin.png">
+      <Link>Assets\Images\Icons\128\coin.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\dagger.png">
+      <Link>Assets\Images\Icons\128\dagger.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\envelope.png">
+      <Link>Assets\Images\Icons\128\envelope.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\gemBlue.png">
+      <Link>Assets\Images\Icons\128\gemBlue.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\gemGreen.png">
+      <Link>Assets\Images\Icons\128\gemGreen.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\gemRed.png">
+      <Link>Assets\Images\Icons\128\gemRed.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\hammer.png">
+      <Link>Assets\Images\Icons\128\hammer.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\heart.png">
+      <Link>Assets\Images\Icons\128\heart.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\helmet.png">
+      <Link>Assets\Images\Icons\128\helmet.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\map.png">
+      <Link>Assets\Images\Icons\128\map.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\potionBlue.png">
+      <Link>Assets\Images\Icons\128\potionBlue.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\potionGreen.png">
+      <Link>Assets\Images\Icons\128\potionGreen.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\potionRed.png">
+      <Link>Assets\Images\Icons\128\potionRed.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\scroll.png">
+      <Link>Assets\Images\Icons\128\scroll.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\shield.png">
+      <Link>Assets\Images\Icons\128\shield.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\shieldSmall.png">
+      <Link>Assets\Images\Icons\128\shieldSmall.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\sword.png">
+      <Link>Assets\Images\Icons\128\sword.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\swordWood.png">
+      <Link>Assets\Images\Icons\128\swordWood.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\tome.png">
+      <Link>Assets\Images\Icons\128\tome.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\tools.png">
+      <Link>Assets\Images\Icons\128\tools.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\upgShieldSmall.png">
+      <Link>Assets\Images\Icons\128\upgShieldSmall.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\upg_armor.png">
+      <Link>Assets\Images\Icons\128\upg_armor.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\upg_axe.png">
+      <Link>Assets\Images\Icons\128\upg_axe.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\upg_axeDouble.png">
+      <Link>Assets\Images\Icons\128\upg_axeDouble.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\upg_bow.png">
+      <Link>Assets\Images\Icons\128\upg_bow.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\upg_dagger.png">
+      <Link>Assets\Images\Icons\128\upg_dagger.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\upg_hammer.png">
+      <Link>Assets\Images\Icons\128\upg_hammer.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\upg_helmet.png">
+      <Link>Assets\Images\Icons\128\upg_helmet.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\upg_shield.png">
+      <Link>Assets\Images\Icons\128\upg_shield.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\upg_spear.png">
+      <Link>Assets\Images\Icons\128\upg_spear.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\upg_sword.png">
+      <Link>Assets\Images\Icons\128\upg_sword.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\upg_wand.png">
+      <Link>Assets\Images\Icons\128\upg_wand.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\wand.png">
+      <Link>Assets\Images\Icons\128\wand.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\128\x.png">
+      <Link>Assets\Images\Icons\128\x.png</Link>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1405059831_87369.ico" />
+    <Resource Include="..\Engine\Assets\Images\Icons\512\armor.png">
+      <Link>Assets\Images\Icons\512\armor.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\axe.png">
+      <Link>Assets\Images\Icons\512\axe.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\axe2.png">
+      <Link>Assets\Images\Icons\512\axe2.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\axeDouble.png">
+      <Link>Assets\Images\Icons\512\axeDouble.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\axeDouble2.png">
+      <Link>Assets\Images\Icons\512\axeDouble2.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\backpack.png">
+      <Link>Assets\Images\Icons\512\backpack.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\bow.png">
+      <Link>Assets\Images\Icons\512\bow.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\coin.png">
+      <Link>Assets\Images\Icons\512\coin.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\dagger.png">
+      <Link>Assets\Images\Icons\512\dagger.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\envelope.png">
+      <Link>Assets\Images\Icons\512\envelope.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\gemBlue.png">
+      <Link>Assets\Images\Icons\512\gemBlue.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\gemGreen.png">
+      <Link>Assets\Images\Icons\512\gemGreen.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\gemRed.png">
+      <Link>Assets\Images\Icons\512\gemRed.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\hammer.png">
+      <Link>Assets\Images\Icons\512\hammer.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\heart.png">
+      <Link>Assets\Images\Icons\512\heart.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\helmet.png">
+      <Link>Assets\Images\Icons\512\helmet.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\map.png">
+      <Link>Assets\Images\Icons\512\map.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\potionBlue.png">
+      <Link>Assets\Images\Icons\512\potionBlue.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\potionGreen.png">
+      <Link>Assets\Images\Icons\512\potionGreen.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\potionRed.png">
+      <Link>Assets\Images\Icons\512\potionRed.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\scroll.png">
+      <Link>Assets\Images\Icons\512\scroll.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\shield.png">
+      <Link>Assets\Images\Icons\512\shield.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\shieldSmall.png">
+      <Link>Assets\Images\Icons\512\shieldSmall.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\tome.png">
+      <Link>Assets\Images\Icons\512\tome.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\tools.png">
+      <Link>Assets\Images\Icons\512\tools.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\upg_armor.png">
+      <Link>Assets\Images\Icons\512\upg_armor.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\upg_axe.png">
+      <Link>Assets\Images\Icons\512\upg_axe.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\upg_axeDouble.png">
+      <Link>Assets\Images\Icons\512\upg_axeDouble.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\upg_bow.png">
+      <Link>Assets\Images\Icons\512\upg_bow.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\upg_dagger.png">
+      <Link>Assets\Images\Icons\512\upg_dagger.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\upg_hammer.png">
+      <Link>Assets\Images\Icons\512\upg_hammer.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\upg_helmet.png">
+      <Link>Assets\Images\Icons\512\upg_helmet.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\upg_shield.png">
+      <Link>Assets\Images\Icons\512\upg_shield.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\upg_shieldSmall.png">
+      <Link>Assets\Images\Icons\512\upg_shieldSmall.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\upg_spear.png">
+      <Link>Assets\Images\Icons\512\upg_spear.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\upg_sword.png">
+      <Link>Assets\Images\Icons\512\upg_sword.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\upg_wand.png">
+      <Link>Assets\Images\Icons\512\upg_wand.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\wand.png">
+      <Link>Assets\Images\Icons\512\wand.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\woodSword.png">
+      <Link>Assets\Images\Icons\512\woodSword.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\512\x.png">
+      <Link>Assets\Images\Icons\512\x.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\armor.png">
+      <Link>Assets\Images\Icons\64\armor.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\axe.png">
+      <Link>Assets\Images\Icons\64\axe.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\axe2.png">
+      <Link>Assets\Images\Icons\64\axe2.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\axeDouble.png">
+      <Link>Assets\Images\Icons\64\axeDouble.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\axeDouble2.png">
+      <Link>Assets\Images\Icons\64\axeDouble2.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\backpack.png">
+      <Link>Assets\Images\Icons\64\backpack.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\bow.png">
+      <Link>Assets\Images\Icons\64\bow.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\coin.png">
+      <Link>Assets\Images\Icons\64\coin.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\dagger.png">
+      <Link>Assets\Images\Icons\64\dagger.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\envelope.png">
+      <Link>Assets\Images\Icons\64\envelope.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\gemBlue.png">
+      <Link>Assets\Images\Icons\64\gemBlue.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\gemGreen.png">
+      <Link>Assets\Images\Icons\64\gemGreen.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\gemRed.png">
+      <Link>Assets\Images\Icons\64\gemRed.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\hammer.png">
+      <Link>Assets\Images\Icons\64\hammer.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\heart.png">
+      <Link>Assets\Images\Icons\64\heart.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\helmet.png">
+      <Link>Assets\Images\Icons\64\helmet.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\map.png">
+      <Link>Assets\Images\Icons\64\map.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\potionBlue.png">
+      <Link>Assets\Images\Icons\64\potionBlue.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\potionGreen.png">
+      <Link>Assets\Images\Icons\64\potionGreen.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\potionRed.png">
+      <Link>Assets\Images\Icons\64\potionRed.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\scroll.png">
+      <Link>Assets\Images\Icons\64\scroll.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\shield.png">
+      <Link>Assets\Images\Icons\64\shield.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\shieldSmall.png">
+      <Link>Assets\Images\Icons\64\shieldSmall.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\sword.png">
+      <Link>Assets\Images\Icons\64\sword.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\swordWood.png">
+      <Link>Assets\Images\Icons\64\swordWood.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\tome.png">
+      <Link>Assets\Images\Icons\64\tome.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\tools.png">
+      <Link>Assets\Images\Icons\64\tools.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\upg_armor.png">
+      <Link>Assets\Images\Icons\64\upg_armor.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\upg_axe.png">
+      <Link>Assets\Images\Icons\64\upg_axe.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\upg_axeDouble.png">
+      <Link>Assets\Images\Icons\64\upg_axeDouble.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\upg_bow.png">
+      <Link>Assets\Images\Icons\64\upg_bow.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\upg_dagger.png">
+      <Link>Assets\Images\Icons\64\upg_dagger.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\upg_hammer.png">
+      <Link>Assets\Images\Icons\64\upg_hammer.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\upg_helmet.png">
+      <Link>Assets\Images\Icons\64\upg_helmet.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\upg_shield.png">
+      <Link>Assets\Images\Icons\64\upg_shield.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\upg_shieldSmall.png">
+      <Link>Assets\Images\Icons\64\upg_shieldSmall.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\upg_spear.png">
+      <Link>Assets\Images\Icons\64\upg_spear.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\upg_sword.png">
+      <Link>Assets\Images\Icons\64\upg_sword.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\upg_wand.png">
+      <Link>Assets\Images\Icons\64\upg_wand.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\wand.png">
+      <Link>Assets\Images\Icons\64\wand.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\64\x.png">
+      <Link>Assets\Images\Icons\64\x.png</Link>
+    </Resource>
+    <Content Include="..\Engine\Assets\Sounds\Music\MainTheme.wav">
+      <Link>Assets\Sounds\Music\MainTheme.wav</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\dwarf_f_128.png">
+      <Link>Assets\Images\Icons\Portraits\dwarf_f_128.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\dwarf_f_256.png">
+      <Link>Assets\Images\Icons\Portraits\dwarf_f_256.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\dwarf_f_64.png">
+      <Link>Assets\Images\Icons\Portraits\dwarf_f_64.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\dwarf_m_128.png">
+      <Link>Assets\Images\Icons\Portraits\dwarf_m_128.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\dwarf_m_256.png">
+      <Link>Assets\Images\Icons\Portraits\dwarf_m_256.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\dwarf_m_64.png">
+      <Link>Assets\Images\Icons\Portraits\dwarf_m_64.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\elf_f_128.png">
+      <Link>Assets\Images\Icons\Portraits\elf_f_128.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\elf_f_256.png">
+      <Link>Assets\Images\Icons\Portraits\elf_f_256.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\elf_f_64.png">
+      <Link>Assets\Images\Icons\Portraits\elf_f_64.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\elf_m_128.png">
+      <Link>Assets\Images\Icons\Portraits\elf_m_128.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\elf_m_256.png">
+      <Link>Assets\Images\Icons\Portraits\elf_m_256.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\elf_m_64.png">
+      <Link>Assets\Images\Icons\Portraits\elf_m_64.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\gnome_m_128.png">
+      <Link>Assets\Images\Icons\Portraits\gnome_m_128.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\gnome_m_256.png">
+      <Link>Assets\Images\Icons\Portraits\gnome_m_256.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\gnome_m_64.png">
+      <Link>Assets\Images\Icons\Portraits\gnome_m_64.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\human_f_128.png">
+      <Link>Assets\Images\Icons\Portraits\human_f_128.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\human_f_256.png">
+      <Link>Assets\Images\Icons\Portraits\human_f_256.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\human_f_64.png">
+      <Link>Assets\Images\Icons\Portraits\human_f_64.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\human_m_128.png">
+      <Link>Assets\Images\Icons\Portraits\human_m_128.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\human_m_256.png">
+      <Link>Assets\Images\Icons\Portraits\human_m_256.png</Link>
+    </Resource>
+    <Resource Include="..\Engine\Assets\Images\Icons\Portraits\human_m_64.png">
+      <Link>Assets\Images\Icons\Portraits\human_m_64.png</Link>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
